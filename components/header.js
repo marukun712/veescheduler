@@ -21,7 +21,7 @@ return(
   </div>
 </div> 
 
-<div className="h-screen bg-gray-100 absolute">
+<div className="h-full bg-gray-100 absolute">
   <div className="sidebar min-h-screen sm:w-56 w-[3.5rem] overflow-hidden border-r ">
     <div className="flex h-screen flex-col justify-between pt-2 pb-6">
       <div>
@@ -32,16 +32,16 @@ return(
           <li className="min-w-max">
             <Link href="/">
             <a aria-label="dashboard" className="bg group flex items-center space-x-4 rounded-full px-4 py-3 text-gray-600">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
-              <span className="-mr-1 font-medium">Top</span>
+            <Image src='https://cdn-icons-png.flaticon.com/512/1946/1946488.png' width={30} height={30}></Image>
+              <span className="-mr-1 font-medium">Home</span>
             </a>
             </Link>
           </li>
           <li className="min-w-max">
-          <Link href="/YABE">
+          <Link href="/veeapi">
             <a className="bg group flex items-center space-x-4 rounded-full px-4 py-3 text-gray-600">
               <Image src='https://cdn-icons-png.flaticon.com/512/994/994152.png' width={30} height={30}></Image>
-              <span className="-mr-1 font-medium">FBK</span>
+              <span className="-mr-1 font-medium">API</span>
             </a>
             </Link>
           </li>

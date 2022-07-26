@@ -1,10 +1,13 @@
 import $ from 'jquery'
+import React, { useState } from 'react';
 
 const Fetch = () => {
+        const [counter, count] = useState(0);
         fetch('https://marukunserver.ml:2200/veeapi')
         .then(res => res.json())
         .then(data => {
             $("#cardarea").empty();
+            count(data.length)
             var num = data.length
         for (let i = 0; i < num; i++) {
             var title = data[i].items.title
@@ -29,27 +32,19 @@ const Fetch = () => {
                 var color = '#FFF4A7'
                 var icon = 'https://yt3.ggpht.com/ZCg_V-PUBtMLJNsmSUYfddSZeehrd_sEH-Dmv65hzr2L3XnINO-j5UkmPBnYCOj80liz2ezp=s88-c-k-c0x00ffffff-no-rj'
             }
-       $('#cardarea').append(`<div class="card sm:w-96 w-80 h-auto bg-base-100 shadow-xl image-full">
-            <figure><img src="${image}" alt="image" /></figure>
-            <div class="card-body">
-              <h2 class="card-title">${title}</h2>
-              <p>${time}</p>
-                <div class="avatar">
-                  <div class="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                  <img src="${icon}" />
-                  </div>
-                </div>
-                <div class="card-actions justify-end">
-                  <a href='${url}'><button class="btn btn-primary">Watch now</button></a>
-                </div>
-            </div>
-          </div>`)}
-          console.log(title)
+       $('#cardarea').append(`<div class="card sm:w-96 w-80 h-auto bg-base-100 shadow-xl image-full"><figure><img src="${image}" alt="image" /></figure><div class="card-body"><h2 class="card-title">${title}</h2><p>${time}</p><div class="avatar"><div class="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2"><img src="${icon}" /></div></div><div class="card-actions justify-end"><a href='${url}'><button class="btn btn-primary">Watch now</button></a></div></div></div>`)
+        }
+        console.log(title)
 
         });
 
     return (
-        <div id='cardarea' className='md:px-80 px-20 space-y-10'></div>
+        <div className='main'>
+        <h2 id="status" class='md:px-80 px-20 text-white font-blod'>配信予定が{counter}個あります</h2>
+        <div id='cardarea' className='md:px-80 px-20 space-y-10'>
+
+        </div>
+        </div>
     )
 }
 

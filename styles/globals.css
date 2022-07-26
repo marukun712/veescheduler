@@ -37,6 +37,12 @@ body {
   }
 }
 
+#status{
+  font-family: fot-tsukuardgothic-std, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 140%;
+}
 
 a {
   color: inherit;
@@ -57,8 +63,21 @@ a {
   }
 }
 
+@media (max-width: 480px) {
+  @keyframes bggradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 70% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
+}
 
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
 @import "~tailwindcss/base";
 @import "~tailwindcss/components";
 @import "~tailwindcss/utilities";
