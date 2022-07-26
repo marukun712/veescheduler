@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function veeapi(){
+export default function Veeapi(){
     const [jsondata, setdata] = useState(0);
     return(
 <div
@@ -14,11 +14,11 @@ export default function veeapi(){
       <p className="mb-5">
       Sony Musicによるvtuberプロジェクト「VEE」の配信スケジュールを取得できるapiです。 
       </p>
-      <div class="mockup-code md:w-auto w-24">
+      <div className="mockup-code md:w-auto w-24">
         <pre data-prefix="$"><code>curl https://marukunserver.ml:2200/veeapi</code></pre>
       </div>
       <hr style={{margin: "5%"}} />
-<label for="my-modal-6" class="btn modal-button bg-primary" onClick={() =>(
+<label htmlFor="my-modal-6" className="btn modal-button bg-primary" onClick={() =>(
  fetch('https://marukunserver.ml:2200/veeapi')
         .then(res => res.json())
         .then(data => {
@@ -29,14 +29,14 @@ export default function veeapi(){
         )
 )}>Request sample</label>
 
-<input type="checkbox" id="my-modal-6" class="modal-toggle" />
-<div class="modal modal-bottom sm:modal-middle">
-  <div class="modal-box">
-  <div class="mockup-code">
+<input type="checkbox" id="my-modal-6" className="modal-toggle" />
+<div className="modal modal-bottom sm:modal-middle">
+  <div className="modal-box">
+  <div className="mockup-code">
   <pre>{jsondata}</pre> 
  </div>
-    <div class="modal-action">
-      <label for="my-modal-6" class="btn">Close</label>
+    <div className="modal-action">
+      <label htmlFor="my-modal-6" className="btn">Close</label>
     </div>
   </div>
 </div>

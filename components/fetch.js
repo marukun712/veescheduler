@@ -40,7 +40,7 @@ const Fetch = () => {
 
     return (
         <div className='main'>
-        <h2 id="status" class='md:px-80 px-20 text-white font-blod'>配信予定が{counter}個あります</h2>
+        <h2 id="status" className='md:px-80 px-20 text-white font-blod'>配信予定が{counter}個あります</h2>
         <div id='cardarea' className='md:px-80 px-20 space-y-10'>
 
         </div>
