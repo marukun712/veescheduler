@@ -4,4 +4,8 @@ const nextConfig = {
   swcMinify: true,
 }
 
-module.exports = nextConfig
+module.exports = {
+  images:{
+    domains:['vee-official.jp','cdn-icons-png.flaticon.com','c.tenor.com'],
+  },
+};
