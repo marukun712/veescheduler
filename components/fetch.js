@@ -1,7 +1,10 @@
+import $ from 'jquery'
+
 const Fetch = () => {
         fetch('https://marukunserver.ml:2200/veeapi')
         .then(res => res.json())
         .then(data => {
+            $("#cardarea").empty();
             var num = data.length
         for (let i = 0; i < num; i++) {
             var title = data[i].items.title
@@ -26,9 +29,7 @@ const Fetch = () => {
                 var color = '#FFF4A7'
                 var icon = 'https://yt3.ggpht.com/ZCg_V-PUBtMLJNsmSUYfddSZeehrd_sEH-Dmv65hzr2L3XnINO-j5UkmPBnYCOj80liz2ezp=s88-c-k-c0x00ffffff-no-rj'
             }
-        if (process.browser) {
-        document.getElementById('cardarea').insertAdjacentHTML("beforeend",` 
-        <div class="card sm:w-96 w-80 h-auto bg-base-100 shadow-xl image-full">
+       $('#cardarea').append(`<div class="card sm:w-96 w-80 h-auto bg-base-100 shadow-xl image-full">
             <figure><img src="${image}" alt="image" /></figure>
             <div class="card-body">
               <h2 class="card-title">${title}</h2>
@@ -45,7 +46,7 @@ const Fetch = () => {
           </div>`)}
           console.log(title)
 
-        }});
+        });
 
     return (
         <div id='cardarea' className='md:px-80 px-20 space-y-10'></div>
