@@ -1,7 +1,8 @@
 import Fetch from '../components/fetch';
 import Head from 'next/head';
 <Head>
-<script dangerouslySetInnerHTML={{ __html: `
+  <script dangerouslySetInnerHTML={{
+    __html: `
   (function(d) {
     var config = {
       kitId: 'qfx6phj',
@@ -14,7 +15,7 @@ import Head from 'next/head';
 </Head>
 
 export default function Home() {
-  return(
-<Fetch />
-  ) 
+  return (
+    <Fetch />
+  )
 }
